@@ -15,7 +15,18 @@ app.get('/contact', (req,res)=> {
 });
 
 app.get('/temp', (req,res)=> {
-    res.send("welcome to my temp page");
+    res.send([{
+        id:1,
+        name: "Abhishek",
+    },
+    {
+        id:2,
+        name: "Abhishek1",
+    },
+    {
+        id:3,
+        name: "Abhishek2",
+    }]);
 });
 
 
