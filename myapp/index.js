@@ -21,6 +21,16 @@ app.get("/",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.send("Or Londe kaam kiya?");
 });
+app.get('*',(req,res)=>{
+    res.render("404",{
+        errorcomment : "opps page not found!"
+    })
+})
+app.get('/about/*',(req,res)=>{
+    res.render("404",{
+        errorcomment : "opps this about us  page not found!"
+    })
+})
 
 app.listen(8000,()=>{
     console.log("listening the port at 8000")
